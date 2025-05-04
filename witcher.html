@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ведьмак 3: Полный Гид</title>
+    <link rel="stylesheet" href="witcher.css">
+    <link rel="stylesheet" href="witcher.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="witcher-ui">
+        <div class="main-menu">
+            <div class="menu-item" data-section="bestiary" id="glossary-menu">
+                <img src="book-cover.svg" alt="Глоссарий">
+                <span>Глоссарий</span>
+                <div class="submenu">
+                    <div class="submenu-item" data-section="bestiary">Бестиарий</div>
+                    <div class="submenu-item" data-section="training">Обучение</div>
+                    <div class="submenu-item" data-section="books">Книги</div>
+                    <div class="submenu-item" data-section="crafting">Ремесло</div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-section="alchemy">
+                <img src="potion-of-madness.svg" alt="Алхимия">
+                <span>Алхимия</span>
+            </div>
+
+            <div class="menu-item" data-section="map">
+                <img src="treasure-map.svg" alt="Карта">
+                <span>Карта</span>
+            </div>
+        
+            <div class="menu-item" data-section="quests">
+                <img src="holy-grail.svg" alt="Задания">
+                <span>Задания</span>
+            </div>
+
+            <div class="menu-item" data-section="character">
+                <img src="prayer.svg" alt="Персонаж">
+                <span>Персонаж</span>
+            </div>
+        </div>
+    
+        <div id="minimap" style="display: none; position: absolute; top: 20px; right: 20px; width: 300px; height: 300px; border: 2px solid #444; background-color: #111;"></div>
+        <div class="content" id="section-content">
+            <div class="back-btn">← Назад</div>
+            <h1 id="section-title"></h1>
+            <div id="items-list">
+                <div id="mini-map" style="width: 100%; height: 500px; display: none;"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="witcher.js"></script>
+</body>
+</html>
