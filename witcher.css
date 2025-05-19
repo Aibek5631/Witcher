@@ -129,16 +129,105 @@ body {
     border-radius: 4px;
     padding: 20px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .item-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background: rgba(211, 184, 94, 0.1);
 }
 
 .item-card h3 {
     color: #d3b85e;
     margin-top: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #5a4d3a;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #d3b85e;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f0e6d2;
+}
+
+.monster-details {
+    display: flex;
+    gap: 30px;
+}
+
+.monster-image-container {
+    flex: 1;
+}
+
+.monster-image-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border: 1px solid #5a4d3a;
+    border-radius: 4px;
+}
+
+.monster-info {
+    flex: 2;
+}
+
+.monster-info h2 {
+    color: #d3b85e;
+    margin-top: 0;
+}
+
+.monster-weaknesses h3 {
+    color: #d3b85e;
+    margin-bottom: 10px;
+}
+
+.monster-weaknesses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.monster-weaknesses li {
+    padding: 5px 0;
+    border-bottom: 1px solid #5a4d3a;
+}
+
+.category-title {
+    grid-column: 1 / -1;
+    color: #d3b85e;
+    font-size: 24px;
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5a4d3a;
 }
 
 @keyframes fadeIn {
@@ -165,8 +254,33 @@ body {
 
 #map {
     width: 100%;
-    height: 500px;
+    height: 700px;
     border: 2px solid #444;
     margin-top: 20px;
     border-radius: 8px;
+}
+
+#mini-map {
+    width: 700px;
+    height: 700px;
+    background-color: #111;
+    border: 2px solid #444;
+    border-radius: 5px;
+}
+
+.leaflet-container {
+    background-color: #111 !important;
+}
+
+.leaflet-control-attribution {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #ccc;
+}
+
+.custom-marker {
+    background-color: #f00;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
 }
